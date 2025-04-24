@@ -48,7 +48,18 @@ body {
     border-radius: 50%;
     -webkit-tap-highlight-color: transparent;
 }
-
+#userName_2 {
+    color: var(--secondaryColor);
+    font-size: 1.25rem;
+    font-weight: bold;
+    line-height: 1.5rem;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 0px;
+}        
 #userName {
     color: var(--secondaryColor);
     font-size: 1.5rem;
@@ -66,16 +77,17 @@ body {
     color: var(--textcolor);
     font-size: 1rem;
     font-weight: medium;
-    line-height: 1.25;
+    line-height: 1.25; /* Corrected to single colon */
     display: block;
     font-family: var(--font);
     width: 100%;
     text-align: center;
     text-decoration: none;
     margin-bottom: 10px;
-
-      
 }
+
+
+    
 #banner {
     margin-top: 10px;  /* Space above the banner */
     margin-bottom: 60px;  /* Space below the banner */
@@ -87,6 +99,41 @@ body {
     height: auto;  /* Maintain the image's aspect ratio */
     display: inline-block;  /* Ensure the image behaves like an inline element */
   }
+
+  .hero-container {
+    width: 90%;
+    margin: 20px auto 40px auto; /* 20px top, 40px bottom */
+    overflow: hidden;
+    border-radius: 60px;
+  }
+  
+  .hero {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+  
+  .hero-img {
+    width: 45%; /* Set to 45% for desktop to make it smaller */
+    max-width: 100%; /* Prevent the image from getting too large */
+    object-fit: cover;
+  }
+  
+  /* Mobile view: stack images vertically */
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+    }
+  
+    .hero-img {
+      width: 100%; /* Full width on mobile */
+    }
+  }
+  
   
 #links {
     max-width: 675px;
